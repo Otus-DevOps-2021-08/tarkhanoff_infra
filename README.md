@@ -28,3 +28,13 @@ tarkhanoff Infra repository
 
     ssh bastion
     ssh someinternalhost
+
+Для доступа к внутренним ресурсам можно использовать VPN.
+
+    Файл конфига для OpenVPN - cloud-bastion.ovpn
+    Логин - test
+    Пароль - 6214157507237678334670591556762
+
+bastion_IP = 62.84.112.99
+
+someinternalhost_IP = 10.128.0.7
