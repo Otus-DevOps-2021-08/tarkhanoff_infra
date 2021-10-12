@@ -1,13 +1,12 @@
 #!/bin/sh
 
-sudo apt-get install apt-utils apt-transport-https ca-certificates
+sudo apt-get install -y apt-transport-https ca-certificates
 
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 
 sudo apt-get update
-sudo apt-get install -y mongodb-org-shell
 sudo apt-get install -y mongodb-org
 
 sudo systemctl start mongod
