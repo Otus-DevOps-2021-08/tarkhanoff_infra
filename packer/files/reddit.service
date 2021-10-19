@@ -1,0 +1,13 @@
+[Unit]
+Description=Reddit App Daemon
+Requires=mongod.service
+After=mongod.service
+
+[Service]
+WorkingDirectory=/home/ubuntu/reddit
+User=ubuntu
+Group=ubuntu
+ExecStart=/usr/local/bin/puma
+
+[Install]
+WantedBy=multi-user.target
