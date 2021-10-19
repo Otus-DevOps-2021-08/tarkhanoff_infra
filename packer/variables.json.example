@@ -1,5 +1,5 @@
 {
   "folder_id": "...",
   "subnet_id": "...",
-  "service_account_key_file": "../../key.json"
+  "service_account_key_file": "fake-key.json"
 }
