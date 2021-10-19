@@ -1,13 +1,21 @@
 {
+  "variables": {
+    "folder_id": "",
+    "subnet_id": "",
+    "zone": "ru-central1-a",
+    "service_account_key_file": "key.json",
+    "source_image_family": "ubuntu-1604-lts"
+  },
+
   "builders": [
     {
       "type": "yandex",
-      "service_account_key_file": "../../def-svc-acc-key.json",
-      "folder_id": "b1gogmvmvck5j8vfij0i",
-      "zone": "ru-central1-a",
-      "subnet_id": "e9bbc65b8eu49qnr5g2b",
+      "service_account_key_file": "{{user `service_account_key_file`}}",
+      "folder_id": "{{user `folder_id`}}",
+      "zone": "{{user `zone`}}",
+      "subnet_id": "{{user `subnet_id`}}",
       "use_ipv4_nat": true,
-      "source_image_family": "ubuntu-1604-lts",
+      "source_image_family": "{{user `source_image_family`}}",
       "image_name": "reddit-base-{{timestamp}}",
       "image_family": "reddit-base",
       "ssh_username": "ubuntu",
