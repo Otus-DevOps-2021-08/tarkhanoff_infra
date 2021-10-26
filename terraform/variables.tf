@@ -30,3 +30,8 @@ variable subnet_id {
 variable service_account_key_file {
   description = "key .json"
 }
+
+variable app_instances {
+  description = "Number of app VM instances"
+  default     = 1
+}
